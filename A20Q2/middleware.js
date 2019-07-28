@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
 
   res.on('finish', () => {
     const allTime = Date.now() - start
-    console.log(`${year}-${month}-${day} ${hours}:${minutes}:${seconds} | ${req.method} from ${req.url} | total: ${allTime} ms`)
+    console.log(`${year}-${month}-${day} ${hours}:${minutes}:${seconds} | ${req.method} from ${req.url} | total time: ${allTime} ms`)
   })
   next()
 }
